@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.9999000000025" prefWidth="861.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.hoster.app.controllers.HomeController">
+  <children>
+    <TabPane prefHeight="447.0" prefWidth="713.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+      <tabs>
+        <Tab fx:id="tabHome" text="HOME">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Pane prefHeight="438.0" prefWidth="918.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <children>
+                    <ImageView fitHeight="313.99000549316406" fitWidth="615.6666916183628" layoutX="151.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="/com/hoster/app/views/assets/logo.png" />
+                      </image>
+                    </ImageView>
+                  </children>
+                </Pane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab fx:id="tabReservasi" text="RESERVASI">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TabPane prefHeight="411.0" prefWidth="713.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <tabs>
+                    <Tab text="CHECK IN">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <TextField fx:id="reservasiNama" layoutX="152.0" layoutY="42.0" prefWidth="200.0" promptText="Nama Customer" />
+                            <TextArea layoutX="645.0" layoutY="29.0" prefHeight="88.0" prefWidth="200.0" wrapText="true" />
+                            <Label layoutX="14.0" layoutY="45.0" text="Nama" />
+                            <TextField fx:id="reservasiKTP" layoutX="152.0" layoutY="72.0" prefWidth="200.0" promptText="35092115131231" />
+                            <Label layoutX="14.0" layoutY="75.0" text="No KTP" />
+                            <TextField fx:id="reservasiEmail" layoutX="152.0" layoutY="105.0" prefWidth="200.0" promptText="email@cusomter.com" />
+                            <Label layoutX="14.0" layoutY="108.0" text="Email" />
+                            <TextField layoutX="152.0" layoutY="136.0" prefWidth="200.0" promptText="0812345123" />
+                            <Label layoutX="14.0" layoutY="139.0" text="No Telepon" />
+                            <Label fx:id="reservasiAlamat" layoutX="543.0" layoutY="41.0" text="Alamat" />
+                            <TextField layoutX="152.0" layoutY="169.0" prefWidth="200.0" promptText="0812345123" />
+                            <Label layoutX="14.0" layoutY="172.0" text="No Telepon" />
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </Tab>
+                    <Tab text="CHECK OUT">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                      </content>
+                    </Tab>
+                  </tabs>
+                </TabPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="DATA" >
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <TabPane prefHeight="411.0" prefWidth="713.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <tabs>
+                    <Tab text="KAMAR">
+                      <content>
+                        <AnchorPane id="Content" fx:id="dataTableKamar" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                      </content>
+                    </Tab>
+<!--                    <fx:include source="/com/hoster/app/views/data/karyawan.fxml" fx:id="tabDataKaryawan" ></fx:include>-->
+                    <Tab text="CUSTOMERS">
+                      <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                          <children>
+                            <TableView fx:id="dataTableCustomers" prefHeight="402.0" prefWidth="861.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </Tab>
+                  </tabs>
+                </TabPane>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+    <MenuBar fx:id="barMenu" prefHeight="25.0" prefWidth="753.0" AnchorPane.bottomAnchor="474.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Close" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Delete" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </children>
+</AnchorPane>

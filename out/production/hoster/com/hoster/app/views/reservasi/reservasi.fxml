@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<Tab fx:controller="com.hoster.app.controllers.ReservasiController" text="RESERVASI" xmlns="http://javafx.com/javafx/8"
+     xmlns:fx="http://javafx.com/fxml/1">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <TabPane prefHeight="442.0" prefWidth="861.0" tabClosingPolicy="UNAVAILABLE">
+            <Tab text="CHECK IN">
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <Label layoutX="142.0" layoutY="14.0" text="-- DATA CUSTOMER --"/>
+                    <TextField fx:id="nama_belakang" layoutX="152.0" layoutY="73.0" prefWidth="200.0"
+                               promptText="Nama Belakang Customer"/>
+                    <Label layoutX="14.0" layoutY="76.0" text="Nama Belakang"/>
+                    <TextField fx:id="nama_depan" layoutX="152.0" layoutY="45.0" prefWidth="200.0"
+                               promptText="Nama Depan Customer"/>
+                    <Label layoutX="14.0" layoutY="48.0" text="Nama Depan"/>
+                    <TextField fx:id="noKtp" layoutX="152.0" layoutY="103.0" prefWidth="200.0"
+                               promptText="35092115131231"/>
+                    <Label layoutX="14.0" layoutY="106.0" text="No KTP"/>
+                    <TextField fx:id="email" layoutX="152.0" layoutY="134.0" prefWidth="200.0"
+                               promptText="email@cusomter.com"/>
+                    <Label layoutX="14.0" layoutY="139.0" text="Email"/>
+                    <TextArea fx:id="alamat" layoutX="152.0" layoutY="193.0" prefHeight="79.0"
+                              prefWidth="199.99990000000253" wrapText="true"/>
+                    <Label layoutX="14.0" layoutY="193.0" text="Alamat"/>
+                    <TextField fx:id="noTelepon" layoutX="152.0" layoutY="163.0" prefWidth="200.0"
+                               promptText="0812345123"/>
+                    <Label layoutX="14.0" layoutY="166.0" text="No Telepon"/>
+                    <TextField fx:id="kota" layoutX="152.0" layoutY="279.0" prefWidth="200.0"
+                               promptText="Jakarta"/>
+                    <Label layoutX="14.0" layoutY="282.0" text="Kota"/>
+                    <TextField fx:id="negara" layoutX="151.0" layoutY="314.0" prefWidth="200.0"
+                               promptText="Indonesia"/>
+                    <Label layoutX="13.0" layoutY="317.0" text="Negara"/>
+                    <Separator layoutX="427.0" orientation="VERTICAL" prefHeight="402.0"/>
+                    <Button fx:id="btnSimpanCustomer" layoutX="153.0" layoutY="365.0"
+                            mnemonicParsing="false" onAction="#storeCustomer" text="SIMPAN"/>
+                    <Button fx:id="btnResetData" layoutX="288.0" layoutY="365.0" mnemonicParsing="false"
+                            onAction="#resetForm" text="RESET"/>
+                    <Label layoutX="572.0" layoutY="14.0" text="-- INFORMASI RESERVASI --"/>
+                    <Label layoutX="448.0" layoutY="114.0" text="Jenis Kamar"/>
+                    <ChoiceBox fx:id="jenisKamar" layoutX="553.0" layoutY="109.0" minHeight="16.0"
+                               prefHeight="25.0" prefWidth="200.0">
+                    </ChoiceBox>
+                    <Label layoutX="446.0" layoutY="150.0" text="Nama Kamar"/>
+                    <ChoiceBox fx:id="namaKamar" layoutX="553.0" layoutY="145.0" minHeight="16.0"
+                               prefHeight="25.0" prefWidth="200.0">
+                    </ChoiceBox>
+                    <Label layoutX="448.0" layoutY="82.0" text="Lama Inap"/>
+                    <TextField fx:id="lamaInap" layoutX="554.0" layoutY="76.0" onAction="#kalkulasiHarga"
+                               prefWidth="103.0" text="0"/>
+                    <TextField fx:id="harga" text="0" visible="false"/>
+                    <TextField fx:id="id_customer" visible="false"/>
+                    <TextField fx:id="id_kamar" visible="false"/>
+                    <Label layoutX="669.0" layoutY="79.0" text="/ malam">
+                        <font>
+                            <Font size="15.0"/>
+                        </font>
+                    </Label>
+                    <Button fx:id="btnReservasi" layoutX="554.0" layoutY="233.0" mnemonicParsing="false"
+                            onAction="#doReservasi" prefHeight="25.0" prefWidth="103.0" text="RESERVASI"/>
+                    <Label layoutX="447.0" layoutY="188.0" text="Total Harga"/>
+                    <Label fx:id="totalHarga" layoutX="554.0" layoutY="188.0" text="Rp. 0,-"/>
+                    <DatePicker fx:id="tanggalInap" layoutX="554.0" layoutY="45.0"/>
+                    <Label layoutX="446.0" layoutY="53.0" text="Tanggal Inap"/>
+                    <Button fx:id="hitungBtn" layoutX="690.0" layoutY="233.0" mnemonicParsing="false"
+                            onAction="#kalkulasiHarga" text="Hitung"/>
+                </AnchorPane>
+            </Tab>
+            <Tab text="CHECK OUT">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <Button fx:id="btnCheckout" layoutX="104.0" layoutY="73.0" mnemonicParsing="false"
+                                onAction="#doCheckout" text="Checkout"/>
+                        <TextField fx:id="checkoutNamaKamar" layoutX="104.0" layoutY="14.0"
+                                   onAction="#checkoutGetKamar"/>
+                        <Label layoutX="14.0" layoutY="19.0" text="Nama kamar"/>
+                        <Label layoutX="104.0" layoutY="47.0"
+                               text="* Pastikan sudah menerima kunci dan Ucapkan salam.">
+                            <font>
+                                <Font size="12.0"/>
+                            </font>
+                        </Label>
+                        <ChoiceBox fx:id="detailCheckout" layoutX="298.0" layoutY="14.0" prefHeight="25.0" prefWidth="253.0"/>
+                    </AnchorPane>
+                </content>
+            </Tab>
+        </TabPane>
+    </AnchorPane>
+</Tab>

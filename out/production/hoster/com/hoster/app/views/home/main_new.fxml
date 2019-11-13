@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.9999000000025" prefWidth="861.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hoster.app.controllers.HomeController">
+   <children>
+     <TabPane prefHeight="499.0" prefWidth="861.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="tabHome" text="HOME">
+             <content>
+               <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <Pane prefHeight="438.0" prefWidth="918.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                       <children>
+                         <ImageView fitHeight="313.99000549316406" fitWidth="615.6666916183628" layoutX="151.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                              <Image url="/com/hoster/app/views/assets/logo.png" />
+                            </image>
+                         </ImageView>
+                       </children>
+                    </Pane>
+                  </children>
+               </AnchorPane>
+             </content>
+          </Tab>
+          <fx:include source="/com/hoster/app/views/reservasi/reservasi.fxml" fx:id="tabReservasi"/>
+          <Tab text="DATA">
+             <content>
+               <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <TabPane prefHeight="411.0" prefWidth="713.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <fx:include source="/com/hoster/app/views/data/reservasi.fxml"
+                                  fx:id="tabDataReservasi"/>
+                      <fx:include source="/com/hoster/app/views/data/kamar.fxml" fx:id="tabDataKamar"/>
+                      <fx:include source="/com/hoster/app/views/data/karyawan.fxml" fx:id="tabDataKaryawan"/>
+                      <fx:include source="/com/hoster/app/views/data/customer.fxml" fx:id="tabDataCustomer"/>
+                    </TabPane>
+                  </children>
+               </AnchorPane>
+             </content>
+          </Tab>
+        </tabs>
+     </TabPane>
+   </children>
+</AnchorPane>

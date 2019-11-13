@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Tab text="RESERVASI" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+     fx:controller="com.hoster.app.controllers.DataReservasiController">
+    <AnchorPane id="DataReservasiAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+        <TableView fx:id="tableReservasi" layoutY="42.0" prefHeight="366.0" prefWidth="861.0">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="35.0" text="#"/>
+                <TableColumn fx:id="namaCustomer" prefWidth="129.0" text="Customer"/>
+                <TableColumn fx:id="namaKamar" prefWidth="101.0" text="Kamar"/>
+                <TableColumn fx:id="jenisKamar" prefWidth="88.0" text="Jenis Kamar"/>
+                <TableColumn fx:id="bookingDate" prefWidth="113.0" text="Booking Date"/>
+                <TableColumn fx:id="checkInDate" prefWidth="119.0" text="Check In Date"/>
+                <TableColumn fx:id="checkOutDate" prefWidth="123.0" text="Check Out Date"/>
+                <TableColumn fx:id="createdAt" prefWidth="152.0" text="Tanggal Dibuat"/>
+            </columns>
+        </TableView>
+        <TextField fx:id="queryKamar" layoutX="13.0" layoutY="12.0" onAction="#cariKamar" prefWidth="200.0"
+                   promptText="Kata Kunci"/>
+        <Button fx:id="btnCariKamarQuery" layoutX="222.0" layoutY="12.0" mnemonicParsing="false" onAction="#cariKamar"
+                text="Cari"/>
+        <Button visible="false" fx:id="btnCariKamarTgl" layoutX="457.0" layoutY="11.0" mnemonicParsing="false"
+                onAction="#cariKamarKosong" text="Cari"/>
+        <DatePicker visible="false" fx:id="queryTanggal" layoutX="288.0" layoutY="11.0" onInputMethodTextChanged="#checkReservasi"
+                    prefHeight="25.0" prefWidth="162.0" promptText="Tanggal Reservasi"/>
+        <ChoiceBox visible="false" fx:id="statusReservasi" layoutX="537.0" layoutY="11.0" minHeight="16.0" prefWidth="150.0">
+        </ChoiceBox>
+        <Button visible="false" fx:id="btnCariStatus" layoutX="700.0" layoutY="11.0" mnemonicParsing="false" onAction="#cariStatus"
+                text="Cari"/>
+    </AnchorPane>
+</Tab>
