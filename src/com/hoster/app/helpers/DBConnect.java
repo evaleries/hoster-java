@@ -9,9 +9,9 @@ public class DBConnect {
     private static final String DBMS = "mysql";
     private static final String HOST = "localhost";
     private static final String PORT = "3306";
-    private static final String DATABASE = "hoster";
-    private static final String USERNAME = "eval";
-    private static final String PASSWORD = "google123";
+    private static final String DATABASE = "";
+    private static final String USERNAME = "";
+    private static final String PASSWORD = "";
 
     public static Connection doConnect() {
         try {
